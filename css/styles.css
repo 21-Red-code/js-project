@@ -1,157 +1,103 @@
-/* variables */
-:root {
-    --font_clr_pokemon_btn: #324CE0;
-    --font_clr_secondary: #504d2d;
-    --poke_btn_background_clr: #D5DB9D;
-    --poke_btn_background_darker: #CCD384;
-    --modal_border: #2a4122e3;
-    --modal_background_clr: #B3D368;
-    --modal_close_btn: #DF5353;
-    --modal_close_btn_hover: #DF0909;
-}
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #dbf4ba9d;
 }
 
-.pokedex-container {
-    display: flex;
-    flex-direction: column;
+.logo {
+  font-size: 3rem;
+  color: #88af1a !important;
+  font-family: Irish Grover;
+  font-weight: 600;
 }
 
-.pokedex-container__title {
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--font_clr_secondary);
+.btn-search {
+  border: 1px solid #88af1a;
+  font-family: Irish Grover;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #88af1a;
+  padding: 2px 6px;
+}
+
+.btn-search:hover {
+  background-color: #88af1a;
+  color: #030706;
+}
+
+.close:hover {
+  color: red;
+}
+
+.modal-header {
+  font-family: Irish Grover;
+  color: #88af1a;
+  background-color: #dbf4ba9d;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.pokemon-list li {
+  margin: 10px;
+  text-align: center;
+  border: none;
+  background-color: #dbf4ba2a;
+}
+
+.pokeEachbtn {
+  background: #88af1a;
+  font-size: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pokeEachbtn::first-letter {
+  text-transform: capitalize;
+}
+
+.pokeEachbtn:hover {
+  background: #6b8a15;
 }
 
 .pokemon-list {
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .pokemon-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pokemon-list {
     display: grid;
-    grid-template-rows: 1fr;
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo {
+    font-size: 2.7rem;
+  }
 }
 
-.poke-button {
-    width: 100%;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: var(--font_clr_pokemon_btn);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 12px;
-    background-color: var(--poke_btn_background_clr);
-}
+@media screen and (max-width: 480px) {
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-.poke-button:hover {
-    box-shadow: 0 5px;
-    background-color: var(--poke_btn_background_darker);
-}
+  .logo {
+    font-size: 2rem;
+  }
 
-/* Modals Example */
-#modal-container {
-    display: none;
-
-}
-
-#modal-container.is-visible {
-    display: block;
-}
-
-.modal {
-    z-index: 1;
-    display: block;
-    width: 70%;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 8px solid var(--modal_border);
-    border-radius: 12px;
-    text-align: center;
-    background-color: var(--modal_background_clr);
-}
-
-.modal__title,
-.modal__text {
-    color: var(--font_clr_secondary);
-}
-
-/* button */
-#show-modal {
-    display: none;
-}
-
-.modal-close {
-    background-color: var(--modal_close_btn);
+  .pokeEachbtn {
     font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    padding: 2px 10px;
-}
-
-.modal-close:hover {
-    box-shadow: 0 3px var(--modal_close_btn_hover);
-}
-
-/* media query */
-@media (max-width: 1024px) {
-    .pokemon-list {
-        display: grid;
-        grid-template-rows: 1fr;
-        justify-content: space-around;
-    }
-}
-
-/* --------------------------- */
-@media (max-width: 768px) {
-    .pokemon-list {
-        grid-template-rows: 1fr;
-        justify-content: space-around;
-    }
-
-    .pokedex-container__title {
-        font-size: 2.2rem;
-    }
-
-    .poke-button {
-        font-size: 1.3rem;
-    }
-
-    .modal__title {
-        font-size: 1.6rem;
-    }
-
-    .modal__text {
-        font-size: 1.4rem;
-    }
-}
-
-/* -------------------------- */
-@media (max-width: 480px) {
-    .pokemon-list {
-        display: grid;
-        grid-template-rows: 1fr;
-        justify-content: space-around;
-    }
-
-    .poke-button {
-        font-size: 1.2rem;
-        color: black;
-    }
-
-    .modal__title {
-        font-size: 1.4rem;
-        font-weight: bold;
-    }
-
-    .modal__text {
-        font-size: 1.2rem;
-    }
+  }
 }
