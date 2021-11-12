@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    background-color: #dbf4ba9d
+}
+
+.logo {
+    font-size: 3rem;
+    color: #88af1a !important;
+    font-family: Irish Grover;
+    font-weight: 600
+}
+
+.btn-search {
+    border: 1px solid #88af1a;
+    font-family: Irish Grover;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #88af1a;
+    padding: 2px 6px
+}
+
+.btn-search:hover {
+    background-color: #88af1a;
+    color: #030706
+}
+
+.close:hover {
+    color: red
+}
+
+.modal-header {
+    font-family: Irish Grover;
+    color: #88af1a;
+    background-color: #dbf4ba9d
+}
+
+.modal-content {
+    text-align: center
+}
+
+.pokemon-list li {
+    margin: 10px;
+    text-align: center;
+    border: none;
+    background-color: #dbf4ba2a
+}
+
+.pokeEachbtn {
+    background: #88af1a;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.pokeEachbtn:first-letter {
+    text-transform: capitalize
+}
+
+.pokeEachbtn:hover {
+    background: #6b8a15
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 15px
+}
+
+@media screen and (max-width:1024px) {
+    .pokemon-list {
+        grid-template-columns: repeat(6, 1fr)
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .logo {
+        font-size: 2.7rem
+    }
+}
+
+@media screen and (max-width:480px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr
+    }
+
+    .logo {
+        font-size: 2rem
+    }
+
+    .pokeEachbtn {
+        font-size: 1.2rem
+    }
+}
