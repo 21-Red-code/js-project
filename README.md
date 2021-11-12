@@ -1,16 +1,16 @@
-## Name:
+## Name :
 
 Pokemon app
 
 ---
 
-## Date:
+## Date :
 
 12.11.21
 
 ---
 
-## Features:
+## Features :
 
 - Loads data from an external source (API)
 - Displays in list style pokemon characters names
@@ -18,7 +18,7 @@ Pokemon app
 
 ---
 
-## Technologies used to built it:
+## Technologies :
 
 - HTML5
 - CSS
